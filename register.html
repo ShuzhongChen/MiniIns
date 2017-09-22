@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/register.css?1.1" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+</head>
+<script type="text/javascript" src="./drawTextShadow.js" >
+
+</script>
+<body onload = "draw()">
+
+<h2>Register Page</h2>
+
+<form action="register-response" method="post">
+  <div class="imgcontainer">
+    <canvas id = "canvas"
+      height = "100"
+      width = "280">
+      <p>Canvas not supported!</p>
+    </canvas>
+  </div>
+
+  <div class="container">
+    <p>
+        <label for="txtName">Username:</label>
+        <input type="text"
+               name = "txtName" 
+               required />
+    </p>
+  
+    <p>
+        <label for="txtEmail">Email:</label>
+        <input type="email"
+               name = "txtEmail"
+               required />
+    </p>
+  
+    <p>
+        <label for="date">Birthday:</label>
+        <input type="date"
+               name = "date" />
+    </p>
+  
+    <p>
+        <label for = "tel">Telephone:</label>
+        <input type = "tel"
+               name = "tel"  />
+    </p>
+    
+    <p>
+        <label>Password:</label>
+        <input type="password"
+               name = "psw" 
+               required />
+    </p>
+  
+    <p>
+        <button type = "submit">
+            Register
+        </button>
+    </p>          
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="stylesheets/login.css?1.1" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+  <script type="text/javascript" src="./login.js" >
+
+  </script>
+</head>
+
+<body onload = "draw()">
+
+<h2>Login Page</h2>
+
+<form action="login-response" method="post" onsubmit="return validate()" name="Form">
+  <div class="imgcontainer">
+    <canvas id = "canvas"
+      height = "100"
+      width = "280">
+      <p>Canvas not supported!</p>
+    </canvas>
+  </div>
+  
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname">
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw">
+
+    <button type="submit">Login</button>
+    <label><input type="checkbox" checked="checked" class="remember"> Remember me</label>
+  </div>
+</form>
+
+
+
+</body>
+</html>

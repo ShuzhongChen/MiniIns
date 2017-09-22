@@ -1,0 +1,86 @@
+h2 {
+  color:#d9d9d9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+button {
+    background-color: #4F92CC;
+    color: white;
+    padding: 11px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin:8px auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size : 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+    margin: auto;
+    width: 50%;
+}
+
+label,p {
+  text-align: center;
+  display: block;
+  /*width:20%;*/
+  margin: auto;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:focus {
+    color: purple;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}
+
+body {
+  background-image: url(http://i.imgur.com/81RTZEw.png);
+  background-size: cover;
+}
