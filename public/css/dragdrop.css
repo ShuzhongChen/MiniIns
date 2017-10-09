@@ -1,5 +1,5 @@
-.dragMe {
-    width: 60px;
+.science, .bussiness, .technique, .sport {
+    width: 100px;
     height: 60px;
     margin-left: 100px;
     border: 1px solid blue;
@@ -19,3 +19,4 @@
     top: 200px;
     z-index: 0;
 }
+
