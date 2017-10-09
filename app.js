@@ -56,7 +56,7 @@ app.post('/' + loginResponse,
     		    wrongInfo = true;
     		} 
         }
-    	if (userFound) html += 'Hello, <a href="./myaccount.html">' + userName + '</a>!';
+    	if (userFound) html += 'Hello, <a href="./homepage.html">' + userName + '</a>!';
     	else if (wrongInfo) html += 'Invaild username or password!';
         else html += 'Please register first!';
         html += '</p></body></html>';

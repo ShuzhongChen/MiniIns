@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton" />
-    <link rel="stylesheet" type="text/css" href = "theme/jquery-ui.min.css" />
-    
-    <link rel="stylesheet" type="text/css" href = "public/theme/jquery-ui.css" />
-    <script type="text/javascript" src="public/theme/jquery-ui.js"></script>
-    
+    <link rel="stylesheet" type="text/css" href = "./jquery-ui.min.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./jquery-ui.min.js"></script>
     <script type="text/javascript" src="./login.js"></script>
-    <script type="text/javascript" src="./register.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        $( "#datepicker" ).datepicker();
+    } );
+  </script>
 </head>
 
 <body onload = "draw()">
@@ -59,7 +59,8 @@
   
     <p>
         <label for = "tel">Telephone:</label>
-        <input type = "tel" name = "tel"  />
+        <input type = "tel"
+               name = "tel"  />
     </p>
     
     <p>
@@ -70,10 +71,9 @@
     </p>
     
     <p>
-        <label>Choose your lucky number:</label>
+        <label>Choose average income for 1 year:</label>
         <div id="slider"></div>
         <div id="slideOutput">0</div>
-        <script type="text/javascript" src="public/js/slider.js"></script>
     </p>
   
     <p>
@@ -82,8 +82,26 @@
         </button>
     </p>          
   </div>
-  
 
+  <div id="resizeMe">
+        <h2>
+            <span class = "ui-icon ui-icon-heart"></span>
+            Resize me
+            <span class = "ui-icon ui-icon-star"></span>
+        </h2>
+        <p>
+            Drag a corner or side to resize.
+        </p>
+  </div>
+  
+  <div class="dragMe">
+      DRAG ME
+      <!--<img src="https://s.yimg.com/ny/api/res/1.2/npllplP_XiXZc.9znrf0AQ--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/zh-Hant-HK/homerun/koreastardaily.com/eacab6e2facfe390e3d995f230751011" width="100" />-->
+  </div>
+  
+  <div id="target">
+      DROP HERE
+  </div>
 
 </form>
 </body>

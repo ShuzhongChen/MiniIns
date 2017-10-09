@@ -4,21 +4,24 @@ function init()
 {
     $("#output").load("users.txt");
 
-    cloneDragMe();
-    $(".dragMe").draggable();
-    $("#target").droppable();
-    $("#target").bind("drop",    highlightTarget);
-    $("#target").bind("dropout", resetTarget);
-
-    $("#resizeMe").resizable();
+    
     $("div").addClass("ui-widget")
             .addClass("ui-widget-content")
             .addClass("ui-corner-all");
     $(":header").addClass("ui-widget-header")
                 .addClass("ui-corner-all");
                 
+    $("#slider").slider().bind("slide", reportSlider);
     
 }
+
+  $( function() {
+
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
 
 /*draw canvas of our website name*/
 function draw() {
@@ -57,3 +60,10 @@ function validate() {
     alert(errors);
     return false;
 }
+
+//sliderBar
+function reportSlider()
+{
+    var sliderVal = $("#slider").slider("value");
+    $("#slideOutput").html(sliderVal);
+} 
