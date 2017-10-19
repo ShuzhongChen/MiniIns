@@ -12,6 +12,8 @@
     "express": "~4.15.2",
     "filereader": "^0.10.3",
     "jade": "~1.11.0",
+    "mongodb": "^2.2.25",
+    "monk": "^4.0.0",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
   }
