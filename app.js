@@ -4,16 +4,41 @@ var lineReader = require('line-reader');
 var path       = require('path');
 var fs         = require('fs');
 
+
+var index = require('./routes/index');
+
 var loginResponse = 'login-response';
 var registerResponse = 'register-response';
 
 // Create the app.
 var app = express();
 
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/Users');
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+
+// Make the database accessible to the router
+app.use(function(req, res, next)
+{ 
+    req.db = db; 
+    next(); 
+});
+
+app.use('/', index);
+
+
+
 // Use the bodyParser() middleware for all routes.
 app.use(bodyParser());
 // Set public directory as static directory.
 app.use(express.static(path.join('public')));
+
+
 
 // Read and send the HTML file.
 app.get('/:pathname', function(req, res) {
@@ -85,4 +110,6 @@ app.post('/' + registerResponse,
     }
 );
 
-app.listen(process.env.PORT);
+//app.listen(process.env.PORT);
+
+module.exports = app;
