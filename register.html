@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <title>Register</title>
-    <meta http-equiv="content-type" 
-          content="text/xml; charset=UTF-8">
-    <link rel="stylesheet" href="stylesheets/register.css?1.1" />
+    <meta http-equiv="content-type" content="text/xml; charset=UTF-8">
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton" />
-    <link rel="stylesheet" type="text/css" href = "theme/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="theme/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="theme/jquery-ui.css" />
+    <link rel="stylesheet" href="stylesheets/register.css?1.1" />
     
-    <link rel="stylesheet" type="text/css" href = "public/theme/jquery-ui.css" />
-    <script type="text/javascript" src="public/theme/jquery-ui.js"></script>
-    
+    <script type="text/javascript" src="theme/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./jquery-ui.min.js"></script>
     <script type="text/javascript" src="./login.js"></script>
     <script type="text/javascript" src="./register.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body onload = "draw()">
 
 <h2>Register Page</h2>
 
-<form action="register-response" method="post">
+<form action="/adduser" method="post">
   <div class="imgcontainer">
     <canvas id = "canvas"
       height = "100"
@@ -36,51 +36,41 @@
 
   <div class="container">
     <p>
-        <label for="txtName">Username:</label>
-        <input type="text"
-               name = "txtName" 
-               required />
+        <label for="username">Username:</label>
+        <input type="text" name="username" required />
     </p>
   
     <p>
         <label for="txtEmail">Email:</label>
-        <input type="email"
-               name = "txtEmail"
-               required />
+        <input type="email" name="txtEmail" required />
     </p>
   
     <p>
         <label>Birthday:</label>
-        <input type="text" id="datepicker">
+        <input type="text" name="bdate" id="datepicker">
     </p>
   
     <p>
-        <label for = "tel">Telephone:</label>
-        <input type = "tel" name = "tel"  />
+        <label for="tel">Telephone:</label>
+        <input type="tel" name="tel" />
     </p>
     
     <p>
         <label>Password:</label>
-        <input type="password"
-               name = "psw" 
-               required />
+        <input type="password" name="password" required />
     </p>
     
     <p>
         <label>How many of your friends have been our users?</label>
         <div id="slider"></div>
         <div id="slideOutput">0</div>
-        <script type="text/javascript" src="public/js/slider.js"></script>
+        <script type="text/javascript" src="js/slider.js"></script>
     </p>
   
     <p>
-        <button type = "submit">
-            Register
-        </button>
+        <button type = "submit"> Register </button>
     </p>          
   </div>
-  
-
 
 </form>
 </body>

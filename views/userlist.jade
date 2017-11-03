@@ -1,7 +1,11 @@
 block content
     h1.
         User List
-    ul
+    ol
         each user, i in userlist
             li
-                a(href="mailto:#{user.email}")= user.username
+                h2 #{user.username}
+                ul
+                    li Email: #{user.email}
+                    li Birthday: #{user.birthday}
+                    li Phone: #{user.phone}

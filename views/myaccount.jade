@@ -1,0 +1,15 @@
+html
+    head
+        title My Account
+        body
+            h3 Hi, #{name}!
+            p
+                img.className#Userimg(src="http://bpic.588ku.com/element_origin_min_pic/01/48/88/2757444507812f6.jpg" alt="User Image" width="100")
+            p
+                a(href="/logout") Logout
+            p
+                a(href="/deleteuser") Delete account
+            
+            each post in posts
+                p #{post.text}
+                img.className#Userposts(src="#{post.img}" alt="User post" width="300")
