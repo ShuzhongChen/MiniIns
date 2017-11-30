@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>Login</title>
-  <link rel="stylesheet" href="stylesheets/login.css?1.1" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
-  <script type="text/javascript" src="./login.js" >
-
-  </script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/login.css" />
 </head>
 
-<body onload = "draw()">
-
-<h2>Login Page</h2>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container" style="margin: auto;width:800px">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      </button>
+      <a class="navbar-brand" href="./">Fantasy</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <a class="btn btn-info float-right" role="button" href="./register.html">Sign up</a>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <form action="login-response" method="post" onsubmit="return validate()" name="Form">
-  <div class="imgcontainer">
-    <canvas id = "canvas"
-      height = "100"
-      width = "280">
-      <p>Canvas not supported!</p>
-    </canvas>
-  </div>
-
-  <div class="container">
+  <div class="container" align="center">
     <label><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname">
 
@@ -36,5 +38,31 @@
   </div>
 </form>
 
-</body>
+<footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>CMPE280 Group Fantasy &copy; Bootstrap</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+    
+    <script type="text/javascript" src="js/header.js"></script>-->
+  </body>
 </html>

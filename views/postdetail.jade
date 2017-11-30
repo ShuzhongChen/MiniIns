@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title User post
+    
+    link(href='css/postdetail.css', rel='stylesheet')
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+  body
+    header
+      .navbar.navbar-dark.bg-dark
+        .container.d-flex.justify-content-between(style='margin: auto;width:1000px')
+          a.navbar-brand(href='./') Fantasy
+          .div(style='margin-left: 200px;')
+            a#login.btn.btn-info.float-right(role='button', href='./login.html', style='') Login
+            a#signup.btn.btn-info(role='button', href='./register.html') Sign up
+            a#myaccount.btn.btn-info.float-left(role='button', href='./myaccount', style='') My Account
+            a#logout.btn.btn-info(role='button', href='./logout') Logout
+    
+    main(role='main')
+      .album.text-muted
+        .container
+          span(style='float:left; width:50%;')
+            img(src="#{posts.img}", alt='User post', width='600px', height='600px')
+          span(style='float:right; width:40%;')
+            .user_info
+              span(style='float:left; width:20%;')
+                img(src="#{userimg}", alt='User profile image', width='60px', height='60px')
+              span(style='float:right; width:80%;')
+                p #{posts.username}
+            .description
+              br
+              br
+              br
+              hr
+              h5 #{posts.text}
+            .comments
+              br
+              br
+              br
+              br
+              br
+              br
+              hr
+              span(style='float:left; width:20%;')
+                a(href='/userdetail?username=mmt')
+                  input#unpressed(type='image', value='joe', src='userimage/home.jpg', 
+                  alt='User profile image', width='40px', height='40px')
+              span(style='float:right; width:80%;')
+                p Nice photo.
+    
+    footer.text-muted
+      .container
+        p.float-right
+          a(href='#') Back to top
+        p CMPE280 Group Fantasy © Bootstrap
+
+    script.
+      function init() {
+        if(#{logged}) {
+          document.getElementById('login').style.visibility = 'hidden';
+          document.getElementById('signup').style.visibility = 'hidden';
+        } else {
+          document.getElementById('myaccount').style.visibility = 'hidden';
+          document.getElementById('logout').style.visibility = 'hidden';
+        }
+      }
+      init();
+          

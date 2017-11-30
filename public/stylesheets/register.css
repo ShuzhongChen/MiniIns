@@ -48,6 +48,9 @@ img.avatar {
 }
 
 .container {
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #555;
     padding: 16px;
     margin: auto;
     width: 50%;
@@ -58,26 +61,6 @@ label,p {
   display: block;
   /*width:20%;*/
   margin: auto;
-}
-
-a:link {
-    color: red;
-}
-
-a:visited {
-    color: orange;
-}
-
-a:focus {
-    color: purple;
-}
-
-a:hover {
-    color: green;
-}
-
-a:active {
-    color: blue;
 }
 
 /*body {
@@ -120,4 +103,24 @@ h1 {
     left: 300px;
     top: 100px;
     z-index: 0;
+}
+
+.ui-datepicker {
+    background: #f7f7f7;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+.ui-slider {
+    background: #f7f7f7;
+	position: relative;
+	text-align: left;
+}
+
+#slider .ui-widget-header { border: 1px solid #aaaaaa; background: #00caff; }
+#slider .ui-state-default { border: 1px solid #aaaaaa; background: #ffffff; }
+
+.ui-slider-range {
+    background: red;
 }

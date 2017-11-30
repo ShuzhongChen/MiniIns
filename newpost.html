@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--<meta charset="utf-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>New post</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/postdetail.css" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+
+  <body>
+    <!--<div id="header"></div>-->
+    <header>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between" style="margin: auto;width:800px">
+          <a href="./" class="navbar-brand">Fantasy</a>
+          <a class="btn btn-info" role="button" href="./logout">Log out</a>
+          <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>-->
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+        <div class="album text-muted">
+            <form action="fileupload" method="post" enctype="multipart/form-data" align="center" style="padding-top: 10px;">
+            <!--<form action="fileupload" method="post" enctype="multipart/form-data" align="center" style="padding-top: 10px;">-->
+                <table align="center">
+                    <tr>
+                        <td colspan="2">
+                            <!--<input type="text" placeholder="What's on your mind?" name="imgtext" style="width: 400px; height: 200px">-->
+                            <textarea rows="4" cols="50" placeholder="What's on your mind?" name="imgtext"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="filetoupload"></td>
+                        <td><button class="btn btn-info" type="submit">Post</button></td>
+                    </tr>
+                </table>
+                
+                <br>
+                <br>
+                <!--<input type="submit" value="Post">-->
+                
+            </form>
+        </div>
+    </main>
+
+
+    <div id="footer"></div>
+    
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>CMPE280 Group Fantasy &copy; Bootstrap</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

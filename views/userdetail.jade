@@ -1,0 +1,65 @@
+html
+    head
+        link(href='css/bootstrap.min.css', rel='stylesheet')
+        body
+            header
+                .navbar.navbar-dark.bg-dark
+                    .container.d-flex.justify-content-between(style='margin: auto;width:1000px')
+                        a.navbar-brand(href='./') Fantasy
+                        .div(style='margin-left: 200px;')
+                            a#login.btn.btn-info.float-right(role='button', href='./login.html', style='') Login
+                            a#signup.btn.btn-info(role='button', href='./register.html') Sign up
+                            a#myaccount.btn.btn-info.float-left(role='button', href='./myaccount', style='') My Account
+                            a#logout.btn.btn-info(role='button', href='./logout') Logout
+            
+            section.jumbotron.text-center
+                .container
+                    table(align="center")
+                        tr
+                            td(rowspan='3')
+                                img#Userimg(src="#{profile}", alt="User Image", width="90")
+                                //img#Userimg(src='http://bpic.588ku.com/element_origin_min_pic/01/48/88/2757444507812f6.jpg', alt='User Image', width='90')
+                        
+                            td(style="display: inline-block;")
+                                div(style="width:200px; white-space: nowrap; overflow: hidden;")
+                                    h3 #{name}
+                                    a#follow.btn.btn-primary(href="/follow?username=#{name}" style="font-size: 10px") Follow
+                                    a#unfollow.btn.btn-secondary(href="/unfollow?username=#{name}" style="font-size: 10px") Unfollow
+                        tr
+                            td
+                                h4 #{slogan}
+                        tr
+                            td
+                                p.lead.text-muted #{post} posts #{follower} followers #{following} following
+            .album.text-muted
+                .container
+                    .row
+                        each post in posts
+                            .col-md-4
+                                .card(style='border: 0;')
+                                    img.className#Userposts(src="#{post.img}" alt="User post" width="300" height="300" )
+                                    p.card-text(height="100px") #{post.text}
+            p.float-right
+                a(href="/deleteuser") Delete account
+            footer.text-muted(style="padding-top: 3rem; padding-bottom: 3rem;")
+                .container
+                    p.float-right
+                    a(href='#') Back to top
+                    p CMPE280 Group Fantasy © Bootstrap
+                    
+            script.
+                function init() {
+                if(#{logged}) {
+                  document.getElementById('login').style.visibility = 'hidden';
+                  document.getElementById('signup').style.visibility = 'hidden';
+                } else {
+                  document.getElementById('myaccount').style.visibility = 'hidden';
+                  document.getElementById('logout').style.visibility = 'hidden';
+                }
+                    if(#{followed}) {
+                        document.getElementById('follow').style.visibility = 'hidden';
+                    } else {
+                        document.getElementById('unfollow').style.visibility = 'hidden';
+                    }
+                }
+                init();

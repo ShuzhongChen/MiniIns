@@ -1,15 +1,44 @@
 html
     head
-        title My Account
+        link(href='css/bootstrap.min.css', rel='stylesheet')
         body
-            h3 Hi, #{name}!
-            p
-                img.className#Userimg(src="http://bpic.588ku.com/element_origin_min_pic/01/48/88/2757444507812f6.jpg" alt="User Image" width="100")
-            p
-                a(href="/logout") Logout
-            p
+            header
+                .navbar.navbar-dark.bg-dark
+                    .container.d-flex.justify-content-between(style='margin: auto;width:800px')
+                        a.navbar-brand(href='./') Fantasy
+                        a.btn.btn-info(role='button', href='/logout') Log out
+            section.jumbotron.text-center
+                .container
+                    table(align="center")
+                        tr
+                            td(rowspan='3')
+                                img#Userimg(src="#{profile}", alt="User Image", width="90")
+                                //img#Userimg(src='http://bpic.588ku.com/element_origin_min_pic/01/48/88/2757444507812f6.jpg', alt='User Image', width='90')
+                            td
+                                h3 #{name}
+                        tr
+                            td
+                                h4 #{slogan}
+                        tr
+                            td
+                                p.lead.text-muted #{post} posts #{follower} followers #{following} following
+                        tr
+                            td
+                                a.btn.btn-primary(href='edit_profile.html') Edit Profile
+                            td
+                                a.btn.btn-success(href='newpost.html') New Post
+            .album.text-muted
+                .container
+                    .row
+                        each post in posts
+                            .col-md-4
+                                .card(style='border: 0;')
+                                    img.className#Userposts(src="#{post.img}" alt="User post" width="300" height="300" )
+                                    p.card-text(height="100px") #{post.text}
+            p.float-right
                 a(href="/deleteuser") Delete account
-            
-            each post in posts
-                p #{post.text}
-                img.className#Userposts(src="#{post.img}" alt="User post" width="300")
+            footer.text-muted(style="padding-top: 3rem; padding-bottom: 3rem;")
+                .container
+                    p.float-right
+                    a(href='#') Back to top
+                    p CMPE280 Group Fantasy © Bootstrap

@@ -4,6 +4,7 @@ var lineReader = require('line-reader');
 var path       = require('path');
 var fs         = require('fs');
 var mongo      = require('mongodb');
+var ObjectId   = require('mongodb').ObjectID;
 var monk       = require('monk');
 var db         = monk('localhost:27017/Fantasy');
 var cookieParser = require('cookie-parser');
@@ -28,7 +29,14 @@ app.use(function(req, res, next)
 });
 
 // Use the bodyParser() middleware for all routes.
-app.use(bodyParser());
+//app.use(bodyParser());
+
+app.use(bodyParser({
+      keepExtensions:true,
+      limit:10000000,// 10M limit
+      defer:true
+}));
+
 // Set public directory as static directory.
 app.use(express.static(path.join('public')));
 app.use(cookieParser());
@@ -106,6 +114,12 @@ app.post('/' + registerResponse,
     }
 );
 
+/*app.post('/fileupload',function(req, res){//bind event handler
+    req.form.on('progress',function(bytesReceived, bytesExpected){});
+    req.form.on('end',function(){
+        console.log(req.files);
+        res.send("done");});
+});*/
 //app.listen(process.env.PORT);
 
 module.exports = app;

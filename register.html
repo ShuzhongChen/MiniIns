@@ -1,68 +1,78 @@
-<!DOCTYPE HTML>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <title>Register</title>
-    <meta http-equiv="content-type" content="text/xml; charset=UTF-8">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton" />
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="stylesheets/login.css" />
+  <link rel="stylesheet" href="stylesheets/register.css?1.1" />
+
     <link rel="stylesheet" type="text/css" href="theme/jquery-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="theme/jquery-ui.css" />
-    <link rel="stylesheet" href="stylesheets/register.css?1.1" />
-    
     <script type="text/javascript" src="theme/jquery-ui.js"></script>
+    
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./jquery-ui.min.js"></script>
+    
     <script type="text/javascript" src="./login.js"></script>
     <script type="text/javascript" src="./register.js"></script>
-
 </head>
 
-<body onload = "draw()">
-
-<h2>Register Page</h2>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="headercontainer" style="margin: auto;width:800px">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      </button>
+      <a class="navbar-brand" href="./">Fantasy</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <a class="btn btn-info float-right" role="button" href="./login.html" style="color:white;">Login</a>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <form action="/adduser" method="post">
-  <div class="imgcontainer">
-    <canvas id = "canvas"
-      height = "100"
-      width = "280">
-      <p>Canvas not supported!</p>
-    </canvas>
-  </div>
-
-  <div class="container">
+  <div class="container" style="text-align: center;">
     <p>
-        <label for="username">Username:</label>
-        <input type="text" name="username" required />
-    </p>
-  
-    <p>
-        <label for="txtEmail">Email:</label>
-        <input type="email" name="txtEmail" required />
-    </p>
-  
-    <p>
-        <label>Birthday:</label>
-        <input type="text" name="bdate" id="datepicker">
-    </p>
-  
-    <p>
-        <label for="tel">Telephone:</label>
-        <input type="tel" name="tel" />
+        <h3 for="username">Username:</h3>
+        <input type="text" name="username" style="width: 500px;" required />
     </p>
     
     <p>
-        <label>Password:</label>
-        <input type="password" name="password" required />
+        <h3 for="slogan">Bio:</h3>
+        <input type="text" name="slogan" style="width: 500px;" />
+    </p>
+  
+    <p>
+        <h3 for="txtEmail">Email:</h3>
+        <input type="email" name="txtEmail" style="width: 500px;" required />
+    </p>
+  
+    <p>
+        <h3>Birthday:</h3>
+        <input type="text" name="bdate" style="width: 500px;" id="datepicker">
+    </p>
+  
+    <p>
+        <h3 for="tel">Telephone:</h3>
+        <input type="tel" name="tel" style="width: 500px;" />
     </p>
     
     <p>
-        <label>How many of your friends have been our users?</label>
-        <div id="slider"></div>
+        <h3>Password:</h3>
+        <input type="password" name="password" style="width: 500px;" required />
+    </p>
+    
+    <p>
+        <h3>How many of your friends are using Fantasy?</h3>
+        <div id="slider" style="width: 500px;margin: auto;"></div>
         <div id="slideOutput">0</div>
         <script type="text/javascript" src="js/slider.js"></script>
     </p>
@@ -73,5 +83,31 @@
   </div>
 
 </form>
-</body>
+    <footer class="text-muted">
+      <div class="footercontainer">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>CMPE280 Group Fantasy &copy; Bootstrap</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>-->
+    <!--<script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+    
+    <script type="text/javascript" src="js/header.js"></script>-->
+  </body>
 </html>
